@@ -1,0 +1,71 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ddd;
+    }
+a#coba {
+    margin: 0 5px;
+    padding: 5px 15px;
+    border-radius: 3px 3px 0 0;
+    background-color: #ddd;
+    text-decoration: none;
+    color: black;
+    }
+a:hover#coba {
+        background-color: #bbb;
+        text-decoration: underline;
+        }
+a.active#coba {
+            order: -1;
+            background-color: #999;
+         }
+
+main {
+        display: flex;
+}
+article {
+         flex: 1 1 50%;
+         order: 2;
+}
+#news {
+       flex: 1 1 25%;
+       order: 3;
+}
+#contact {
+          flex: 1 1 25%;
+          order: 1;
+}
+/* img{
+    width:300px;
+    margin-left: 150px;
+} */
+h2{
+    text-align: center;
+}
+
+a#coba1{
+    color: rgb(92, 65, 65);
+    text-decoration: none;
+    text-align: center;
+}
+
+h1#coba1{
+    text-align: center;
+}
+
+/* for Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 110px;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+.container {
+    padding: 2px 16px;
+}

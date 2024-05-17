@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Files Upload</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        
+        <nav>
+            <a id="coba" href="/">Home</a>
+            <a id="coba" href="/about">About</a>
+            <a id="coba" class="active">Blog</a>
+            <a id="coba" href="/jobs">Careers</a>
+            <a id="coba" href="/contact">Contact Us</a>
+            <a id="coba" href="form">Form</a>
+        </nav>
+
+    
+        <main>
+            <article>
+                <h2>Where It's At</h2>
+                {% for file in files %}
+
+                <div class="card">
+                    <img src="{{ url_for('static', filename= 'uploads/' + file.image)}}" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h3><a href='show/{{file.id}}' id="coba1">{{ file.judul }}</a></h3> 
+                      <p>By: {{ file.penulis }}</p> 
+                    </div>
+                </div>
+
+                {% endfor %}
+            </article>
+            <aside id="news"><h2>News</h2></aside>
+            <aside id="contact"><h2>Contact</h2><aside>
+        </main>
+        
+    </body>
+</html>
